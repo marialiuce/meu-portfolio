@@ -1,4 +1,3 @@
-// Tipagens (O "contrato" de como os dados devem ser)
 export type Experience = {
   id: string;
   role: string;
@@ -12,11 +11,10 @@ export type Project = {
   title: string;
   description: string;
   techStack: string[];
-  linkGithub?: string; // O "?" significa que é opcional
+  linkGithub?: string; 
   linkLive?: string;
 };
 
-// Seus Dados de Experiência
 export const experiences: Experience[] = [
   {
     id: "1",
@@ -41,7 +39,6 @@ export const experiences: Experience[] = [
   }
 ];
 
-// Seus Dados de Projetos
 export const projects: Project[] = [
   {
     id: "1",

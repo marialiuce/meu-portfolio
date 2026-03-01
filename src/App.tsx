@@ -2,6 +2,7 @@ import Header from "./components/shared/Header";
 import Hero from "./components/sections/Hero";
 import About from "./components/sections/About";
 import TypingTag from "./components/shared/TypingTag";
+import Skills from "./components/sections/Skills";
 
 export default function App() {
   return (
@@ -12,14 +13,11 @@ export default function App() {
         {/* Seção 1 */}
         <Hero />
 
-        {/* Nossa nova Seção 2 */}
+        {/* Seção 2 */}
         <About />
 
         {/* Seção 3 */}
-        <section id="skills" className="relative min-h-screen flex items-center justify-center border-t border-border/40">
-          <h2 className="text-4xl font-serif text-primary">Seção 3: Habilidades</h2>
-          <TypingTag tag="</skills>" />
-        </section>
+        <Skills />
 
         {/* Seção 4 */}
         <section id="experience" className="relative min-h-screen flex items-center justify-center border-t border-border/40">

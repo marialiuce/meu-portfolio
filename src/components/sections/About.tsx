@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Cat, Bike, MapPin, CodeXml, Heart, Palette, Leaf, Dice6, BookOpen, Coffee, TerminalSquare } from "lucide-react";
+import { Cat, Bike, MapPin, CodeXml, Heart, Palette, Dice6, BookOpen, Coffee, TerminalSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import TypingTag from "../shared/TypingTag";
 
@@ -8,7 +8,6 @@ export default function About() {
   // Estado que controla se os balões estão visíveis
   const [showHobbies, setShowHobbies] = useState(false);
 
-  // Seus 11 fatos com posições calculadas para formar um círculo ao redor da foto
   const hobbies = [
     { id: 1, icon: <TerminalSquare size={20} />, label: "Liu", position: "-top-4 left-[10%]", delay: 0.1 },
     { id: 2, icon: <MapPin size={20} />, label: "Brasileira, 25 anos", position: "-top-10 left-[35%]", delay: 0.2 },
@@ -58,7 +57,6 @@ export default function About() {
                   duration: 0.6,
                   delay: showHobbies ? hobby.delay : 0 
                 }}
-                // A classe z-20 garante que eles fiquem por cima da foto
                 className={`absolute ${hobby.position} z-20 flex flex-col items-center gap-1.5 pointer-events-none`}
               >
                 <div className="bg-background border-2 border-primary text-primary p-2.5 rounded-full shadow-lg">
