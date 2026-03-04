@@ -38,3 +38,5 @@ The design is intentionally personal: a warm pastel color palette inspired by na
 
 ## Preview
 
+https://github.com/user-attachments/assets/be33662c-31df-4db7-b686-4bd24e4b36df
+
