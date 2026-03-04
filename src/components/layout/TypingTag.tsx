@@ -12,7 +12,7 @@ export default function TypingTag({ tag }: { tag: string }) {
           hidden: {}
         }}
       >
-        {tag.split("").map((char, index) => (
+        {tag.split("").map((char, index) => ( // ← aqui o `tag` é usado
           <motion.span
             key={index}
             variants={{

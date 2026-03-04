@@ -1,19 +1,4 @@
-export type Experience = {
-  id: string;
-  role: string;
-  company: string;
-  period: string;
-  description: string;
-};
-
-export type Project = {
-  id: string;
-  title: string;
-  description: string;
-  techStack: string[];
-  linkGithub?: string; 
-  linkLive?: string;
-};
+import type { Experience, Project } from "@/types";
 
 export const experiences: Experience[] = [
   {
@@ -29,13 +14,6 @@ export const experiences: Experience[] = [
     company: "Jaguar Cursos",
     period: "Fevereiro 2023 - Fevereiro 2025",
     description: "Suporte técnico, manutenção de equipamentos e auxílio direto aos usuários, garantindo o funcionamento contínuo das operações."
-  },
-  {
-    id: "3",
-    role: "Atendimento ao Cliente",
-    company: "Almaviva do Brasil",
-    period: "Abril 2022 - Maio 2023",
-    description: "Atendimento direto e suporte ao cliente, desenvolvendo forte comunicação e empatia na resolução de conflitos."
   }
 ];
 

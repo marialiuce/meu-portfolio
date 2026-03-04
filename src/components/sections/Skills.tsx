@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import TypingTag from "../shared/TypingTag";
+import type { Skill } from "@/types";
+import TypingTag from "@/components/layout/TypingTag";
 
-const skills = [
+const skills: Skill[] = [
   { name: "React.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
   { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" },
   { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
@@ -21,7 +22,6 @@ export default function Skills() {
   return (
     <section id="skills" className="relative min-h-screen flex items-center justify-center py-20 px-6 max-w-6xl mx-auto">
       <div className="w-full">
-        
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-mono font-bold text-primary tracking-wider">
             Minhas skills
@@ -31,21 +31,17 @@ export default function Skills() {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-12 gap-x-8">
           {skills.map((skill, idx) => (
             <motion.div
-              key={idx}
+              key={skill.name}
               initial={{ opacity: 0, scale: 0.5 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ 
-                type: "spring",
-                bounce: 0.4,
-                delay: idx * 0.1 
-              }}
+              transition={{ type: "spring", bounce: 0.4, delay: idx * 0.1 }}
               className="flex flex-col items-center justify-center group cursor-pointer"
             >
               <div className="h-16 w-16 md:h-20 md:w-20 mb-4 transition-transform duration-300 group-hover:-translate-y-2 group-hover:scale-110 drop-shadow-sm group-hover:drop-shadow-md">
-                <img 
-                  src={skill.icon} 
-                  alt={`Ícone do ${skill.name}`} 
+                <img
+                  src={skill.icon}
+                  alt={skill.name}
                   className="w-full h-full object-contain"
                 />
               </div>

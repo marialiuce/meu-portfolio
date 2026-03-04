@@ -4,26 +4,76 @@
 
 @layer base {
   :root {
-    --background: 40 33% 98%;
-    --foreground: 20 14.3% 4.1%;
-    --card: 0 0% 100%;
-    --card-foreground: 20 14.3% 4.1%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 20 14.3% 4.1%;
-    --primary: 24 9.8% 10%;
-    --primary-foreground: 60 9.1% 97.8%;
-    --secondary: 60 4.8% 95.9%;
-    --secondary-foreground: 24 9.8% 10%;
-    --muted: 60 4.8% 95.9%;
-    --muted-foreground: 25 5.3% 44.7%;
-    --accent: 60 4.8% 95.9%;
-    --accent-foreground: 24 9.8% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 60 9.1% 97.8%;
-    --border: 20 5.9% 90%;
-    --input: 20 5.9% 90%;
-    --ring: 20 14.3% 4.1%;
+    /* ── Light Mode — creme rosado, inspirado na foto ── */
+    --background: 30 45% 96%;
+    /* creme quente clarinho */
+    --foreground: 18 30% 15%;
+    /* marrom escuro suave */
+
+    --card: 28 40% 93%;
+    --card-foreground: 18 30% 15%;
+
+    --popover: 28 40% 93%;
+    --popover-foreground: 18 30% 15%;
+
+    --primary: 16 38% 30%;
+    /* caramelo escuro — textos e botões */
+    --primary-foreground: 30 45% 96%;
+
+    --secondary: 22 38% 88%;
+    /* bege rosado suave */
+    --secondary-foreground: 16 38% 30%;
+
+    --muted: 24 30% 90%;
+    --muted-foreground: 18 15% 50%;
+    /* cinza creme médio */
+
+    --accent: 14 42% 82%;
+    /* rosado pastel */
+    --accent-foreground: 16 38% 30%;
+
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 30 45% 96%;
+
+    --border: 20 28% 84%;
+    --input: 20 28% 84%;
+    --ring: 16 38% 30%;
     --radius: 0.5rem;
+  }
+
+  /* ── Dark Mode — marrom profundo com acentos creme rosado ── */
+  .dark {
+    --background: 18 22% 9%;
+    /* marrom escuro profundo */
+    --foreground: 26 35% 88%;
+    /* creme rosado para leitura */
+
+    --card: 18 18% 13%;
+    --card-foreground: 26 35% 88%;
+
+    --popover: 18 18% 13%;
+    --popover-foreground: 26 35% 88%;
+
+    --primary: 20 52% 68%;
+    /* pêssego/caramelo pastel — destaque */
+    --primary-foreground: 18 22% 9%;
+
+    --secondary: 18 16% 17%;
+    --secondary-foreground: 26 35% 88%;
+
+    --muted: 18 16% 17%;
+    --muted-foreground: 22 18% 58%;
+    /* cinza quente médio */
+
+    --accent: 16 35% 25%;
+    --accent-foreground: 26 35% 88%;
+
+    --destructive: 0 50% 42%;
+    --destructive-foreground: 26 35% 88%;
+
+    --border: 18 16% 19%;
+    --input: 18 16% 19%;
+    --ring: 20 52% 68%;
   }
 }
 
@@ -32,7 +82,12 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 }
