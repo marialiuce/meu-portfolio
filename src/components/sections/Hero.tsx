@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
-import TypingTag from "../layout/TypingTag";
+import TypingTag from "@/components/layout/TypingTag";
 
 const container = {
   hidden: { opacity: 0 },
@@ -12,7 +12,11 @@ const container = {
 
 const item = {
   hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" as const },
+  },
 };
 
 export default function Hero() {
