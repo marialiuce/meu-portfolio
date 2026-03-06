@@ -7,7 +7,7 @@
 
 A personal portfolio built to showcase my projects, skills, and professional journey as a Full Stack developer in training. Designed with a warm pastel palette, smooth animations, and full dark/light mode support.
 
-[Live Demo](#)
+[Live Demo](https://liu-dev.vercel.app/)
 
 ## Technologies
 
