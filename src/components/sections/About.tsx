@@ -7,7 +7,7 @@ import {
 import { Button } from "@/components/ui/button";
 import TypingTag from "@/components/layout/TypingTag";
 import type { Hobby } from "@/types";
-import perfilImg from "@/assets/images/minha-foto.jpg";
+import perfilImg from "@/assets/images/foto-perfil.jpg";
 
 const hobbies: Hobby[] = [
   { id: 1,  icon: <TerminalSquare size={20} />, label: "Liu",                              position: "-top-4 left-[10%]",      delay: 0.1 },
