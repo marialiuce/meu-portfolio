@@ -18,6 +18,29 @@ const skills: Skill[] = [
   { name: "Nest.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg" },
 ];
 
+const SkillCard = ({ skill, index }: { skill: Skill; index: number }) => (
+  <motion.div
+    initial={{ opacity: 0, scale: 0.5 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    viewport={{ once: true, margin: "-50px" }} 
+    transition={{ type: "spring", bounce: 0.4, delay: index * 0.1 }}
+    className="flex flex-col items-center justify-center group" 
+  >
+    <div className="h-16 w-16 md:h-20 md:w-20 mb-4 transition-transform duration-300 group-hover:-translate-y-2 group-hover:scale-110 drop-shadow-sm group-hover:drop-shadow-md">
+      <img
+        src={skill.icon}
+        alt={`Logotipo oficial do ${skill.name}`} 
+        loading="lazy" 
+        decoding="async"
+        className="w-full h-full object-contain"
+      />
+    </div>
+    <span className="font-mono text-sm md:text-base text-primary/80 font-semibold text-center transition-colors duration-300 group-hover:text-primary">
+      {skill.name}
+    </span>
+  </motion.div>
+);
+
 export default function Skills() {
   return (
     <section id="skills" className="relative min-h-screen flex items-center justify-center py-20 px-6 max-w-6xl mx-auto">
@@ -30,25 +53,7 @@ export default function Skills() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-12 gap-x-8">
           {skills.map((skill, idx) => (
-            <motion.div
-              key={skill.name}
-              initial={{ opacity: 0, scale: 0.5 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ type: "spring", bounce: 0.4, delay: idx * 0.1 }}
-              className="flex flex-col items-center justify-center group cursor-pointer"
-            >
-              <div className="h-16 w-16 md:h-20 md:w-20 mb-4 transition-transform duration-300 group-hover:-translate-y-2 group-hover:scale-110 drop-shadow-sm group-hover:drop-shadow-md">
-                <img
-                  src={skill.icon}
-                  alt={skill.name}
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <span className="font-mono text-sm md:text-base text-primary/80 font-semibold text-center transition-colors duration-300 group-hover:text-primary">
-                {skill.name}
-              </span>
-            </motion.div>
+            <SkillCard key={skill.name} skill={skill} index={idx} />
           ))}
         </div>
       </div>

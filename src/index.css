@@ -4,11 +4,8 @@
 
 @layer base {
   :root {
-    /* ── Light Mode — creme rosado, inspirado na foto ── */
     --background: 30 45% 96%;
-    /* creme quente clarinho */
     --foreground: 18 30% 15%;
-    /* marrom escuro suave */
 
     --card: 28 40% 93%;
     --card-foreground: 18 30% 15%;
@@ -17,19 +14,15 @@
     --popover-foreground: 18 30% 15%;
 
     --primary: 16 38% 30%;
-    /* caramelo escuro — textos e botões */
     --primary-foreground: 30 45% 96%;
 
     --secondary: 22 38% 88%;
-    /* bege rosado suave */
     --secondary-foreground: 16 38% 30%;
 
     --muted: 24 30% 90%;
     --muted-foreground: 18 15% 50%;
-    /* cinza creme médio */
 
     --accent: 14 42% 82%;
-    /* rosado pastel */
     --accent-foreground: 16 38% 30%;
 
     --destructive: 0 65% 55%;
@@ -41,12 +34,9 @@
     --radius: 0.5rem;
   }
 
-  /* ── Dark Mode — marrom profundo com acentos creme rosado ── */
   .dark {
     --background: 18 22% 9%;
-    /* marrom escuro profundo */
     --foreground: 26 35% 88%;
-    /* creme rosado para leitura */
 
     --card: 18 18% 13%;
     --card-foreground: 26 35% 88%;
@@ -55,7 +45,6 @@
     --popover-foreground: 26 35% 88%;
 
     --primary: 20 52% 68%;
-    /* pêssego/caramelo pastel — destaque */
     --primary-foreground: 18 22% 9%;
 
     --secondary: 18 16% 17%;
@@ -63,7 +52,6 @@
 
     --muted: 18 16% 17%;
     --muted-foreground: 22 18% 58%;
-    /* cinza quente médio */
 
     --accent: 16 35% 25%;
     --accent-foreground: 26 35% 88%;

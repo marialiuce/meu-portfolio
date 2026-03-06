@@ -1,24 +1,33 @@
 import { motion } from "framer-motion";
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.15 },
+  },
+};
+
+const letterVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 },
+};
+
 export default function TypingTag({ tag }: { tag: string }) {
   return (
-    <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center font-mono text-xl md:text-2xl font-bold text-primary/30 select-none">
+    <div 
+      aria-hidden="true"
+      className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center font-mono text-xl md:text-2xl font-bold text-primary/30 select-none"
+    >
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.8 }}
-        variants={{
-          visible: { transition: { staggerChildren: 0.15 } },
-          hidden: {}
-        }}
+        variants={containerVariants}
       >
-        {tag.split("").map((char, index) => ( // ← aqui o `tag` é usado
+        {tag.split("").map((char, index) => (
           <motion.span
-            key={index}
-            variants={{
-              hidden: { opacity: 0 },
-              visible: { opacity: 1 }
-            }}
+            key={`${char}-${index}`} 
+            variants={letterVariants}
           >
             {char}
           </motion.span>

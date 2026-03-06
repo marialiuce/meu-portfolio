@@ -37,13 +37,13 @@ export const projects: Project[] = [
     title: "DevFinder",
     description: "Aplicação que consome a API do GitHub para buscar e exibir perfis de desenvolvedores de forma limpa e responsiva.",
     techStack: ["React", "TypeScript"],
-    linkGithub: "#",
+    linkGithub: "https://github.com/marialiuce/devfinder-react",
   },
   {
     id: "4",
     title: "Markdown Notes",
     description: "Aplicativo para criação, edição e organização de notas em tempo real utilizando o formato Markdown.",
     techStack: ["React", "TypeScript"],
-    linkGithub: "#",
+    linkGithub: "https://github.com/marialiuce/react-markdown-notes",
   }
 ];

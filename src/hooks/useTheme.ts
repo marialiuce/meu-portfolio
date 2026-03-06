@@ -4,7 +4,6 @@ type Theme = "light" | "dark";
 
 export function useTheme() {
   const [theme, setTheme] = useState<Theme>(() => {
-    // Lê preferência salva ou usa preferência do sistema
     const saved = localStorage.getItem("theme") as Theme | null;
     if (saved) return saved;
     return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";

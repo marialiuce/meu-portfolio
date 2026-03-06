@@ -19,6 +19,30 @@ const item = {
   },
 };
 
+const socialLinks = [
+  {
+    id: "github",
+    href: "https://github.com/marialiuce",
+    icon: <FaGithub size={28} />,
+    ariaLabel: "Acessar meu perfil no GitHub",
+    isExternal: true,
+  },
+  {
+    id: "linkedin",
+    href: "https://linkedin.com/in/marialiuce",
+    icon: <FaLinkedin size={28} />,
+    ariaLabel: "Acessar meu perfil no LinkedIn",
+    isExternal: true,
+  },
+  {
+    id: "email",
+    href: "mailto:malyefx@gmail.com",
+    icon: <FaEnvelope size={28} />,
+    ariaLabel: "Enviar um e-mail para mim",
+    isExternal: false,
+  },
+];
+
 export default function Hero() {
   return (
     <section
@@ -44,28 +68,18 @@ export default function Hero() {
         </motion.p>
 
         <motion.div variants={item} className="flex items-center justify-center space-x-6 pt-6">
-          <a
-            href="https://github.com/marialiuce"
-            target="_blank"
-            rel="noreferrer"
-            className="p-4 bg-secondary text-secondary-foreground rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1"
-          >
-            <FaGithub size={28} />
-          </a>
-          <a
-            href="https://linkedin.com/in/marialiuce"
-            target="_blank"
-            rel="noreferrer"
-            className="p-4 bg-secondary text-secondary-foreground rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1"
-          >
-            <FaLinkedin size={28} />
-          </a>
-          <a
-            href="mailto:malyefx@gmail.com"
-            className="p-4 bg-secondary text-secondary-foreground rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1"
-          >
-            <FaEnvelope size={28} />
-          </a>
+          {socialLinks.map((link) => (
+            <a
+              key={link.id}
+              href={link.href}
+              target={link.isExternal ? "_blank" : "_self"}
+              rel={link.isExternal ? "noopener noreferrer" : undefined}
+              aria-label={link.ariaLabel}
+              className="p-4 bg-secondary text-secondary-foreground rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1"
+            >
+              {link.icon}
+            </a>
+          ))}
         </motion.div>
       </motion.div>
 
